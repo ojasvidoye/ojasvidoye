@@ -1,0 +1,540 @@
+:root {
+  --background-color: #0a192f;
+  --text-color: #8892b0;
+  --accent-color: #64ffdb9b;
+  --header-background: rgba(10, 25, 47, 0.8);
+  --navbar-background: #0a192f;
+  --navbar-text: #ccd6f6;
+  --navbar-text-hover: #64ffdb9b;
+  --project-background: #303C55;
+  --project-info-background: rgba(255, 255, 255, 0.9);
+}
+
+/* Reset default styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: 'Roboto';
+  background-color: var(--background-color);
+  position: relative; /* Added */
+}
+
+/* Header styles */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: var(--header-background);
+  padding: 20px;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+header.scrolled {
+  background-color: transparent;
+}
+
+/* Body padding to adjust for the fixed header */
+body {
+  padding-top: 60px; /* Adjust this value as needed */
+}
+
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
+header {
+  font-size: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--navbar-background);
+  padding: 20px;
+  z-index: 999;
+  transition: background-color 0.3s;
+}
+
+nav.nav-scrolled {
+  background-color: transparent;
+}
+
+/* Add this CSS if needed to adjust the spacing when the navbar is fixed */
+body {
+  padding-top: 80px; /* Adjust the value as needed */
+}
+
+.logo {
+  color: var(--navbar-text);
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: monospace;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+nav ul li:first-child {
+  margin-left: 0;
+}
+
+nav ul li a {
+  font-family: monospace;
+  font-size: 25px;
+  color: var(--navbar-text);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: var(--navbar-text-hover);
+}
+
+.sticky-title {
+  top: 0;
+  background-color: var(--header-background);
+  padding: 20px;
+  color: #fff;
+  z-index: 999;
+  transition: background-color 0.3s;
+}
+
+/* Hero section styles */
+#hero {
+  background-color: var(--background-color);
+  padding: 200px 0;
+  justify-content: flex;
+  align-items: flex-start;
+  padding-left: 15rem;
+  height: 100%;
+
+}
+#hero img {
+  width: 200px; 
+  margin-left: 20px; 
+  flex-direction: row;
+
+}
+#hero h1 {
+  font-size: 120px;
+  color: #ccd6f6;
+}
+
+#hero p {
+  font-size: 50px;
+  color: var(--text-color);
+  padding: 15px;
+}
+
+#hero p.hello {
+  font-size: 45px;
+  font-family: monospace;
+  color: var(--accent-color);
+  padding: 10px;
+}
+
+button {
+  background-color: var(--background-color);
+  border: none;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  font-size: 25px;
+  padding: 15px;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  color: var(--background-color);
+  background-color: var(--accent-color);
+}
+
+/* About section styles */
+#about {
+  padding: 100px 0;
+  text-align: center;
+}
+
+#about h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--navbar-text);
+}
+
+#about p {
+  font-family: monospace;
+  color: var(--text-color);
+  font-size: 25px;
+  padding-right: 250px;
+  padding-left: 250px;
+}
+
+/* Skills section styles */
+#skills {
+  padding: 100px 0;
+  text-align: center;
+}
+
+#skills h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--navbar-text);
+}
+
+#skills ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#skills li {
+  color: var(--text-color);
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: var(--project-background);
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: monospace;
+}
+
+#projects {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project-title {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--navbar-text);
+  display: flex;
+  justify-content: center;
+}
+
+.project {
+  position: relative;
+  width: 350px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: var(--project-background);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s;
+  overflow: hidden;
+}
+
+.project:hover {
+  transform: scale(1.25);
+}
+
+.project h3 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.project-info {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: var(--project-info-background);
+  color: var(--background-color);
+  transition: opacity 0.3s;
+  overflow: auto;
+  font-size: 17px;
+}
+.project:hover .project-info {
+  display: block;
+  background-color: var(--text-color);
+}
+
+.github-link img {
+  width: 50px;
+  height: 50px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.github-link:hover img {
+  filter: none;
+}
+
+/* Contact section styles */
+#contact {
+  background-color: var(--background-color);
+  padding: 100px 0;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: var(--navbar-text);
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact input,
+#contact textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  width: 400px;
+  border-radius: 5px;
+  border: 1px solid var(--project-background);
+  background-color: var(--project-background);
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+#contact input[type="submit"] {
+  background-color: var(--background-color);
+  color: var(--accent-color);
+  border: var(--accent-color) solid;
+  cursor: pointer;
+  font-size: 20px;
+  width: 250px;
+  transition-duration: 0.4s;
+}
+
+#contact ::placeholder {
+  color: var(--text-color);
+}
+
+#contact input[type="submit"]:hover {
+  color: var(--background-color);
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+/* Footer styles */
+.social-links {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.social-links a {
+  color: var(--text-color);
+  font-size: 25px;
+  margin-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 1px;
+}
+
+.social-links a i {
+  color: var(--text-color);
+  transition-duration: 0.4s;
+}
+
+.social-links a:hover {
+  color: var(--accent-color);
+}
+
+footer {
+  background-color: var(--background-color);
+  color: #ccd6f6;
+  padding: 20px;
+  text-align: center;
+}
+/* Media Queries */
+
+/* Mobile devices */
+@media only screen and (max-width: 600px) {
+  header {
+    font-size: 16px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  #hero h1 {
+    font-size: 60px;
+  }
+
+  #hero p {
+    font-size: 30px;
+  }
+
+  #about h2 {
+    font-size: 30px;
+  }
+
+  #about p {
+    font-size: 5px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  #skills h2 {
+    font-size: 24px;
+  }
+
+  #skills li {
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+
+  .project-title {
+    font-size: 24px;
+  }
+
+  .project {
+    width: 100%;
+  }
+
+  .project h3 {
+    font-size: 30px;
+  }
+
+  .github-link img {
+    width: 30px;
+    height: 30px;
+  }
+
+  #contact h2 {
+    font-size: 24px;
+  }
+
+  #contact p {
+    font-size: 18px;
+  }
+
+  input,
+  textarea {
+    font-size: 16px;
+  }
+
+  button[type="submit"] {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}
+
+/* iPad and tablet devices */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  header {
+    font-size: 18px;
+  }
+
+  .logo {
+    font-size: 28px;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+  }
+
+  #hero h1 {
+    font-size: 80px;
+  }
+
+  #hero p {
+    font-size: 40px;
+  }
+
+  #about h2 {
+    font-size: 34px;
+  }
+
+  #about p {
+    font-size: 22px;
+    padding-right: 150px;
+    padding-left: 150px;
+  }
+
+  #skills h2 {
+    font-size: 32px;
+  }
+
+  #skills li {
+    font-size: 24px;
+    padding: 8px 16px;
+  }
+
+  .project-title {
+    font-size: 32px;
+  }
+
+  .project {
+    width: 40%;
+  }
+
+  .project h3 {
+    font-size: 36px;
+  }
+
+  .github-link img {
+    width: 40px;
+    height: 40px;
+  }
+
+  #contact h2 {
+    font-size: 32px;
+  }
+
+  #contact p {
+    font-size: 22px;
+  }
+
+  input,
+  textarea {
+    font-size: 18px;
+  }
+
+  button[type="submit"] {
+    font-size: 20px;
+    padding: 12px 24px;
+  }
+}
